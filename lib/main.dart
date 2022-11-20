@@ -33,6 +33,37 @@ class MyApp extends StatelessWidget {
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
         ),
+        body: ListView.builder(
+          itemCount: foods.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Card(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        foods[index].name, // <- Here
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    child: Image.asset(
+                      foods[index].Imgpath, // <- Here
+                      width: 125,
+                      height: 125,
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
       ),
     );
   }

@@ -1,6 +1,6 @@
 # flutter_collections_menu_app
 
-A new Flutter project.
+Menu App 🍽️
 
 ## Getting Started
 
